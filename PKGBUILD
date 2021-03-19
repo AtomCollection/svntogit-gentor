@@ -11,6 +11,5 @@ makedepends=()
 source=(https://github.com/AtomCollection/gentor/releases/download/1.0/gentor-1.0.tar.gz")
 md5sums=('d106e09f82affd51f7f9c4c3bdebd04e')
 package() {
-    cd "$srcdir/$pkgname"
     python3 install.py
 }
