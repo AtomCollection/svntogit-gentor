@@ -14,8 +14,3 @@ build() {
   cd "$srcdir/$pkgname"
   python install.py
 }
-
-package() {
-  cd "$srcdir/$pkgname"
-  python setup.py
-} 
