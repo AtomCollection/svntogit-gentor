@@ -16,7 +16,6 @@ build() {
 }
 
 package() {
-  cd "$srcdir/$pkgname-$pkgver"
-  sed -i "s/PROJECTVERSION/$pkgver/g" install.py
+  cd "$srcdir/$pkgname"
   python setup.py
 } 
