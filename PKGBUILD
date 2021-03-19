@@ -15,5 +15,6 @@ build() {
     sudo python install.py build
 }
 package() {
+    cd "$srcdir/$pkgname"
     sudo python install.py install
 }
