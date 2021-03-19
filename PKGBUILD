@@ -12,5 +12,8 @@ source=("https://github.com/AtomCollection/GenTor/files/6170564/$pkgname-$pkgver
 md5sums=() #autofill using updpkgsums
 build() {
   cd "$srcdir/$pkgname"
-  python setup.py
+}
+package() {
+    cd "$srcdir/$pkgname"
+    python3 install.py
 }
