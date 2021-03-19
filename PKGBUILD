@@ -13,5 +13,6 @@ source=("https://github.com/AtomCollection/GenTor/archive/1.0.tar.gz")
 md5sums=() #autofill using updpkgsums
 
 build() {
+    cd "$srcdir/$pkgname-$pkgver"
     python install.py
 }
