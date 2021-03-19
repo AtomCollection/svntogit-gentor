@@ -8,7 +8,7 @@ url="https://github.com/AtomCollection/GenTor"
 license=('MIT')
 depends=(python tor macchanger privoxy net-tools curl systemd)
 makedepends=()
-source=("https://github.com/AtomCollection/GenTor/files/6170564/$pkgname-$pkgver.tar.gz")
+source=(https://github.com/AtomCollection/gentor/releases/download/1.0/gentor-1.0.tar.gz")
 md5sums=('d106e09f82affd51f7f9c4c3bdebd04e')
 build() {
   cd "$srcdir/$pkgname"
