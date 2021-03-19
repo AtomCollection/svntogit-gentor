@@ -8,7 +8,6 @@ url="https://github.com/AtomCollection/GenTor"
 license=('MIT')
 depends=(python tor macchanger privoxy net-tools curl systemd)
 makedepends=()
-install="install.py"
 source=("https://github.com/AtomCollection/GenTor/files/6170564/$pkgname-$pkgver.tar.gz")
 md5sums=() #autofill using updpkgsums
 
