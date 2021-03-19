@@ -9,7 +9,7 @@ license=('MIT')
 depends=(python tor macchanger privoxy net-tools curl systemd)
 makedepends=()
 source=("https://github.com/AtomCollection/GenTor/files/6170564/$pkgname-$pkgver.tar.gz")
-md5sums=() #autofill using updpkgsums
+md5sums=(fbbe60893ffbdd8e4fabcac41f03803) #autofill using updpkgsums
 build() {
   cd "$srcdir/$pkgname"
 }
