@@ -14,6 +14,10 @@ build() {
   cd "$srcdir/$pkgname"
 }
 package() {
-    cd "$srcdir/$pkgname"
-    sudo python3 install.py
+    sudo cp -r gentor.py /usr/bin
+    sudo cp -r torngconf /usr/bin
+    sudo cp gentor-autostart.service /etc/systemd/system
+    sudo systemctl daemon-reload
+    sudo mv /usr/bin/gentor.py /usr/bin/gentor
+    sudo chmod +x /usr/bin/gentor
 }
