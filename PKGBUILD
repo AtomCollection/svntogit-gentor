@@ -10,6 +10,14 @@ depends=(python tor macchanger privoxy net-tools curl systemd)
 makedepends=()
 source=("https://github.com/AtomCollection/gentor/releases/download/1.0/gentor-1.0.tar.gz")
 md5sums=('d106e09f82affd51f7f9c4c3bdebd04e')
-package() {
-    python3 install.py
+build() {
+  cd "$srcdir/$pkgname-$pkgver"
+  sed -i "s/PROJECTVERSION/$pkgver/g" install.py
+  python install.py
 }
+
+package() {
+  cd "$srcdir/$pkgname-$pkgver"
+  sed -i "s/PROJECTVERSION/$pkgver/g" install.py
+  python setup.py
+} 
