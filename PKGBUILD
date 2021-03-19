@@ -12,8 +12,7 @@ source=("https://github.com/AtomCollection/gentor/releases/download/1.0/gentor-1
 md5sums=('d106e09f82affd51f7f9c4c3bdebd04e')
 build() {
   cd "$srcdir/$pkgname"
-  sed -i "s/PROJECTVERSION/$pkgver/g" install.py
-  python install.py --prefix=/usr
+  sudo python install.py
 }
 package() {
     cd "$srcdir/$pkgname"
