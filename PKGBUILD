@@ -15,4 +15,5 @@ build() {
   python install.py
 }
 package() {
+    cd "$srcdir/$pkgname-$pkgver"
 }
