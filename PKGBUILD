@@ -13,7 +13,6 @@ md5sums=('d106e09f82affd51f7f9c4c3bdebd04e')
 build() {
     sudo python setup.py build
 }
-
 package() {
     sudo python setup.py install
 }
