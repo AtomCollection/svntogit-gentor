@@ -14,6 +14,7 @@ build() {
   cd "$srcdir/$pkgname"
 }
 package() {
+    cd "$srcdir/$pkgname"
     sudo cp -r gentor.py /usr/bin
     sudo cp -r torngconf /usr/bin
     sudo cp gentor-autostart.service /etc/systemd/system
