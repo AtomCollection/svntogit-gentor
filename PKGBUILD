@@ -14,3 +14,5 @@ build() {
   cd "$srcdir/$pkgname"
   python install.py
 }
+package() {
+}
