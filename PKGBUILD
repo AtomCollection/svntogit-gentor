@@ -11,14 +11,9 @@ makedepends=()
 source=("https://github.com/AtomCollection/gentor/releases/download/1.0/gentor-1.0.tar.gz")
 md5sums=('d106e09f82affd51f7f9c4c3bdebd04e')
 build() {
-  cd "$srcdir/$pkgname"
+    sudo python setup.py build
 }
+
 package() {
-    cd "$srcdir/$pkgname"
-    sudo cp -r gentor.py /usr/bin
-    sudo cp -r torngconf /usr/bin
-    sudo cp gentor-autostart.service /etc/systemd/system
-    sudo systemctl daemon-reload
-    sudo mv /usr/bin/gentor.py /usr/bin/gentor
-    sudo chmod +x /usr/bin/gentor
+    sudo python setup.py install
 }
