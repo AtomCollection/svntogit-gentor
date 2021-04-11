@@ -11,7 +11,7 @@ pkgbase = gentor
 	depends = systemd
 	depends = iptables
 	source = https://github.com/ChihebBayouli/gentor/releases/download/0.1/setup.bin
-	md5sums = 0b241856746e881cf8e0041b4de3a71a
+	md5sums = 83e53ea8a725cb5bb43ea9c7c940a094
 
 pkgname = gentor
 
