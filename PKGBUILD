@@ -1,18 +1,19 @@
 # Maintainer: Chiheb Bayouli <chihebbayouli@gmail.com>
 pkgname=gentor
-pkgver=0.1
+pkgver=0.2
 pkgrel=1
 pkgdesc="Utility to make your internet traffic anonymized through Tor network"
 arch=(any)
 url="https://github.com/ChihebBayouli/gentor"
 license=('custom')
 depends=(wget curl systemd iptables)
-source=("https://github.com/ChihebBayouli/gentor/releases/download/v0.1/setup.bin")
+source=("https://github.com/ChihebBayouli/gentor/releases/download/v0.2/setup.sh")
 install=.INSTALL
-md5sums=('83e53ea8a725cb5bb43ea9c7c940a094')
+md5sums=('b0cb18aac523c689a12a223abf95be81')
 build() {
-    chmod +x setup.bin
+    cd "$srcdir"
+    chmod +x setup.sh
 }
 package() {
-    sudo ./setup.bin
+    sudo ./setup.sh
 }
